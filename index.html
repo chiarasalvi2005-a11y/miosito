@@ -1,9 +1,298 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
 <head>
-    <title>Hello World</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ink & Shape - Portfolio</title>
+  <link rel="stylesheet" href="css/bootstrap-grid.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Hello World</h1>
+  <!-- HEADER / NAVIGATION -->
+  <div class="container-fluid">
+        <div class="row pt-4 pb-3 align-items-center header-row">
+            <!-- Logo CS -->
+            <div class="col-6 col-lg-2">
+              <a href="#" class="logo-cs">CS</a>
+            </div>
+            
+            <!-- Menu Desktop -->
+            <div class="col-lg-9 nav-wrapper d-none d-lg-block">
+                <ul class="nav-list">
+                      <li class="nav-item">
+                          <a href="#chi-sono" class="nav-link">CHI SONO</a>
+                      </li>
+                      <li class="nav-item">
+                          <a href="#formazione" class="nav-link">FORMAZIONE</a>
+                      </li>
+                      <li class="nav-item">
+                          <a href="#progetti" class="nav-link">PROGETTI</a>
+                      </li>
+                      <li class="nav-item">
+                          <a href="#contatti" class="nav-link">CONTATTI</a>
+                      </li>
+                </ul>
+            </div>
+            
+            <!-- Menu Mobile Button -->
+            <div class="col-6 col-lg-1 d-flex justify-content-end align-items-center">
+              <button class="btn btn-menu d-block d-lg-none">Menu</button>
+            </div>
+        </div>
+
+        <!-- Menu Mobile -->
+        <div class="mobile-nav-wrapper d-lg-none">
+             <button class="btn btn-close mb-3">Close</button> 
+               <ul class="nav-list">
+                      <li class="nav-item">
+                          <a href="#chi-sono" class="nav-link">CHI SONO</a>
+                      </li>
+                      <li class="nav-item">
+                          <a href="#formazione" class="nav-link">FORMAZIONE</a>
+                      </li>
+                      <li class="nav-item">
+                          <a href="#progetti" class="nav-link">PROGETTI</a>
+                      </li>
+                      <li class="nav-item">
+                          <a href="#contatti" class="nav-link">CONTATTI</a>
+                      </li>
+                </ul> 
+        </div>
+    </div>
+
+    <!-- HERO SECTION - INK & SHAPE -->
+    <section class="hero-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="hero-title">Ink &<br>Shape</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEZIONE CHI SONO -->
+    <section id="chi-sono" class="section-chi-sono">
+        <div class="container-fluid content-wrapper">
+            <div class="row align-items-center">
+                <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+                    <img class="img-fluid" src="img/IMG_7217.jpg" alt="Chi sono">
+                </div>
+                <div class="col-12 col-lg-5 offset-lg-1">
+                    <h2 class="section-title">Chi sono?</h2>
+                    <p class="section-text">
+                        Sono Chiara e con ogni progetto cerco di trovare il mio posto.
+                    </p>
+                    <p class="section-text">
+                        La creatività è sempre stata il filo conduttore della mia vita. Una passione che si è trasformata nel desiderio di realizzare idee che possano avere un senso anche per gli altri.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEZIONE FORMAZIONE -->
+    <section id="formazione" class="section-formazione">
+        <div class="container-fluid content-wrapper">
+            <div class="row">
+                <div class="col-12 col-lg-5 offset-lg-1">
+                    <h2 class="section-title">Formazione</h2>
+                    <p class="section-text">
+                        Il mio percorso di studi è iniziato al Liceo delle Scienze Umane, esperienza che mi ha dato solide basi umanistiche e sociali. Successivamente ho deciso di cambiare rotta, intraprendendo un nuovo cammino all’Università di Design di San Marino, dove sto approfondendo la mia passione per la creatività e la progettazione.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEZIONE I MIEI PROGETTI -->
+    <section id="progetti" class="section-progetti">
+        <div class="container-fluid content-wrapper">
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h2 class="section-title-progetti">I MIEI PROGETTI</h2>
+                </div>
+            </div>
+
+            <!-- Prima riga progetti (4 colonne) -->
+            <div class="row progetti-grid mb-4">
+                <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                    <div class="progetto-item">
+                        <img class="img-fluid" src="img/manifesto1.jpg" alt="Manifesto Nuovastoria">
+                        <h3 class="progetto-nome">Manifesto</h3>
+                        <p class="progetto-descrizione">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor sit amet dolor eu sodales.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                    <div class="progetto-item">
+                        <img class="img-fluid" src="img/totebag2.jpg" alt="Tote Bag">
+                        <h3 class="progetto-nome">Tote Bag</h3>
+                        <p class="progetto-descrizione">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor sit amet dolor eu sodales.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                    <div class="progetto-item">
+                        <img class="img-fluid" src="img/badge.jpg" alt="Badge">
+                        <h3 class="progetto-nome">Badge</h3>
+                        <p class="progetto-descrizione">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor sit amet dolor eu sodales.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                    <div class="progetto-item">
+                        <img class="img-fluid" src="img/felpa.jpg" alt="Felpa">
+                        <h3 class="progetto-nome">Felpa</h3>
+                        <p class="progetto-descrizione">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor sit amet dolor eu sodales.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FASCIA BIANCA - PROGETTO D'ESAME -->
+    <section class="section-esame">
+        <div class="container-fluid content-wrapper">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="testo-esame">Progetto d'esame del corso di Laboratorio della Comunicazione</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEZIONE PROTEGGI LA SCHIENA -->
+    <section class="section-paraschiena">
+        <div class="container-fluid content-wrapper">
+            <div class="row align-items-center">
+                <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+                    <img class="img-fluid" src="img/paraschiena.jpg" alt="Paraschiena">
+                </div>
+                <div class="col-12 col-lg-5 offset-lg-1">
+                    <h2 class="section-title-black">PROTEGGI LA SCHIENA</h2>
+                    <p class="section-text">
+                        Progetto d'esame per il corso di Elaborati di Design, dove viene presentato e spiegato un oggetto che migliora la qualità della vita quotidiana, rendendo semplici gesti più sicuri ed efficaci. Il prodotto è stato realizzato in classe.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEZIONE ALTRI PROGETTI -->
+    <section class="section-altri-progetti">
+        <div class="container-fluid content-wrapper">
+            <!-- Manifesto BETWEEN LOCKED -->
+            <div class="row mb-5 align-items-center">
+                <div class="col-12 col-lg-4 mb-4 mb-lg-0">
+                    <img class="img-fluid" src="img/MANIF.jpg" alt="Between Locked">
+                </div>
+                <div class="col-12 col-lg-4 mb-4 mb-lg-0">
+                    <img class="img-fluid" src="img/Rectangle 2.jpg" alt="Cappello in Pelle">
+                </div>
+                <div class="col-12 col-lg-4">
+                    <img class="img-fluid" src="img/IMG_7555.jpg" alt="Il Design Oggi">
+                </div>
+            </div>
+
+            <!-- Testi progetti -->
+            <div class="row">
+                <div class="col-12 col-lg-4 mb-4 mb-lg-0">
+                    <h3 class="progetto-titolo">MANIFESTO CINEMA BETWEEN LOCKED</h3>
+                    <p class="progetto-testo">
+                        Manifesto per il corso di Elementi di Tipografia, dove presenta il monologo di un personaggio e il titolo del film della lezione.
+                    </p>
+                </div>
+                <div class="col-12 col-lg-4 mb-4 mb-lg-0">
+                    <h3 class="progetto-titolo">CAPPELLO IN PELLE</h3>
+                    <p class="progetto-testo">
+                        Cappello in pelle creato nel corso di Elaborati di Design, adattando un pattern e utilizzando diverse forme e colori al lavoro di gruppo.
+                    </p>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <h3 class="progetto-titolo">IL DESIGN OGGI - "100+1 DESIGNER OGGI"</h3>
+                    <p class="progetto-testo">
+                        Rivista e presentazione per il corso di Storia, Arte e Design, dove viene analizzato l'autore scelto in classe e le sue opere per gli studenti.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER / CONTATTI -->
+    <footer id="contatti" class="footer-section">
+        <div class="container-fluid content-wrapper">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="footer-text">"TIENI, ascensore è innovazione. Il design non muore mai"</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link">Instagram</a>
+                    </div>
+                    <p class="footer-copyright">© 2024</p>
+                    <p class="footer-info">
+                        CS<br>
+                        Bologna — Ravenna
+                    </p>
+                    <p class="footer-links">
+                        <a href="#" class="footer-link">Privacy</a> — <a href="#" class="footer-link">Cookies</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript per menu mobile -->
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const btnMenu = document.querySelector('.btn-menu');
+    const btnClose = document.querySelector('.btn-close');
+    const mobileNavWrapper = document.querySelector('.mobile-nav-wrapper');
+    const navLinks = document.querySelectorAll('.mobile-nav-wrapper .nav-link');
+    
+    btnMenu.addEventListener('click', function() {
+        mobileNavWrapper.style.display = 'flex';
+        setTimeout(() => {
+            mobileNavWrapper.classList.add('show');
+        }, 10);
+    });
+    
+    function closeMenu() {
+        mobileNavWrapper.classList.remove('show');
+        setTimeout(() => {
+            if (!mobileNavWrapper.classList.contains('show')) {
+                mobileNavWrapper.style.display = 'none';
+            }
+        }, 300);
+    }
+    
+    btnClose.addEventListener('click', closeMenu);
+    
+    mobileNavWrapper.addEventListener('click', function(e) {
+        let isLink = false;
+        navLinks.forEach(function(link) {
+            if (link.contains(e.target)) {
+                isLink = true;
+            }
+        });
+        
+        if (!isLink) {
+            closeMenu();
+        }
+    });
+
+    // Smooth scroll per anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+                closeMenu();
+            }
+        });
+    });
+});
+</script>
+
 </body>
 </html>

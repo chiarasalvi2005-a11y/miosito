@@ -1,0 +1,429 @@
+/* style.css - Portfolio Ink & Shape */
+
+/* Reset e stili base */
+html, body{
+     font-family: Helvetica, Arial, sans-serif;
+     font-size: 16px;
+     line-height: 1.6;
+     margin: 0;
+     padding: 0;
+     color: #000;
+}
+
+/* Content wrapper - max width per contenuti */
+.content-wrapper{
+    max-width: 1200px;
+}
+
+/* ==================== HEADER / NAVIGATION ==================== */
+
+/* Logo CS */
+.logo-cs {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: #000;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.logo-cs:hover {
+    color: #000;
+}
+
+.header-row {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Lista di navigazione */
+.nav-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* CENTRA LE 4 VOCI */
+    align-items: center;
+    gap: 40px; /* distanza orizzontale tra le voci */
+}
+
+/* Items della navigazione */
+.nav-item {
+    margin: 0;
+    padding: 0;
+}
+
+/* Links */
+.nav-link {
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0 15px;
+    padding: 8px 0;
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease;
+}
+
+.nav-link:hover {
+    border-bottom: 2px solid #000;
+}
+
+/* Navigazione mobile */
+.mobile-nav-wrapper{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 1000;
+    display: flex;
+    padding-top: 20%;
+    justify-content: center;
+    align-items: flex-start;
+    display: none;
+}
+
+.mobile-nav-wrapper.show{
+    display: flex;
+}
+
+.mobile-nav-wrapper .nav-list{
+    flex-direction: column;
+    padding-top: 50px;
+    align-items: center;
+}
+
+.mobile-nav-wrapper .nav-item{
+    margin: 20px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.mobile-nav-wrapper .nav-link{
+    font-size: 20px;
+    padding: 10px 0;
+}
+
+.mobile-nav-wrapper .nav-link:hover{
+    border-bottom: 2px solid #000;
+}
+
+/* Bottone menu mobile */
+.btn-menu{
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Bottone close menu */
+.btn-close{
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+/* ==================== HERO SECTION ==================== */
+
+.hero-section {
+    background-color: #000;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* <-- allinea a sinistra */
+    text-align: left; /* <-- testo allineato a sinistra */
+    padding: 80px 20px;
+}
+
+.hero-title {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 1.1;
+    color: #fff;
+    margin: 0;
+    letter-spacing: -2px;
+    margin-left: 5%; /* <-- lascia un po’ di bordo a sinistra */
+}
+
+/* ==================== SEZIONE CHI SONO ==================== */
+
+.section-chi-sono {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.section-title {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 1.3;
+    margin-bottom: 25px;
+    color: #000;
+}
+
+.section-text {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+/* ==================== SEZIONE FORMAZIONE ==================== */
+
+.section-formazione {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+/* ==================== SEZIONE PROGETTI ==================== */
+
+.section-progetti {
+    padding: 80px 0 40px 0;
+    background-color: #fff;
+}
+
+.section-title-progetti {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+    letter-spacing: 1px;
+    margin-bottom: 60px;
+    color: #000;
+}
+
+.progetti-grid {
+    /* Grid gestita da Bootstrap */
+}
+
+.progetto-item {
+    margin-bottom: 30px;
+}
+
+.progetto-item img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.progetto-nome {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.progetto-descrizione {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* ==================== FASCIA ESAME ==================== */
+
+.section-esame {
+    padding: 40px 0;
+    background-color: #fff;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.testo-esame {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+    color: #000;
+}
+
+/* ==================== SEZIONE PARASCHIENA ==================== */
+
+.section-paraschiena {
+    padding: 80px 0;
+    background-color: #000;
+}
+
+.section-title-black {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 1.3;
+    margin-bottom: 25px;
+    color: #fff;
+}
+
+.section-paraschiena .section-text {
+    color: #fff;
+}
+
+/* ==================== SEZIONE ALTRI PROGETTI ==================== */
+
+.section-altri-progetti {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.progetto-titolo {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.progetto-testo {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #000;
+}
+
+/* ==================== FOOTER ==================== */
+
+.footer-section {
+    padding: 60px 0 40px 0;
+    background-color: #fff;
+    border-top: 1px solid #e0e0e0;
+}
+
+.footer-text {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    color: #000;
+    font-style: italic;
+}
+
+.footer-social {
+    margin-bottom: 30px;
+}
+
+.social-link {
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 0 10px;
+    border-bottom: 1px solid #000;
+}
+
+.social-link:hover {
+    opacity: 0.7;
+}
+
+.footer-copyright {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.footer-info {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.footer-links {
+    font-size: 14px;
+    color: #000;
+}
+
+.footer-link {
+    color: #000;
+    text-decoration: none;
+    border-bottom: 1px solid #000;
+}
+
+.footer-link:hover {
+    opacity: 0.7;
+}
+
+/* ==================== MEDIA QUERIES ==================== */
+
+/* Tablet e smartphone grande */
+@media (max-width: 991px) {
+    .hero-title {
+        font-size: 60px;
+    }
+    
+    .section-title {
+        font-size: 24px;
+    }
+    
+    .section-title-black {
+        font-size: 24px;
+    }
+}
+
+/* Smartphone */
+@media (max-width: 767px) {
+    .hero-section {
+        min-height: 50vh;
+        padding: 60px 20px;
+    }
+    
+    .hero-title {
+        font-size: 48px;
+    }
+    
+    .section-chi-sono {
+        padding: 60px 0;
+    }
+    
+    .section-formazione {
+        padding: 40px 0;
+    }
+    
+    .section-progetti {
+        padding: 60px 0 30px 0;
+    }
+    
+    .section-title-progetti {
+        font-size: 28px;
+        margin-bottom: 40px;
+    }
+    
+    .section-paraschiena {
+        padding: 60px 0;
+    }
+    
+    .section-altri-progetti {
+        padding: 60px 0;
+    }
+}
+
+/* Smartphone piccolo */
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 40px;
+    }
+    
+    .section-title {
+        font-size: 22px;
+    }
+    
+    .section-title-black {
+        font-size: 22px;
+    }
+    
+    .section-title-progetti {
+        font-size: 24px;
+    }
+}
