@@ -3,17 +3,32 @@
 /* Reset e stili base */
 html, body{
      font-family: Helvetica, Arial, sans-serif;
-     font-size: 18px;
+     font-size: 16px;
      line-height: 1.6;
      margin: 0;
      padding: 0;
      color: #000;
+     overflow-x: hidden; /* Impedisce lo scroll orizzontale */
+     width: 100%;
 }
 
-/* Content wrapper - max width per contenuti */
-/* .content-wrapper{
-    max-width: 1200px;
-} */
+/* Previene overflow su tutti i contenitori */
+.container-fluid {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+[class*="col-"] {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
 
 /* ==================== HEADER / NAVIGATION ==================== */
 
@@ -21,14 +36,18 @@ html, body{
 .logo-cs {
     font-family: Helvetica, Arial, sans-serif;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 24px;
     color: #000;
     text-decoration: none;
     letter-spacing: 2px;
+    transition: transform 0.3s ease, letter-spacing 0.3s ease;
+    display: inline-block;
 }
 
 .logo-cs:hover {
     color: #000;
+    transform: scale(1.1);
+    letter-spacing: 4px;
 }
 
 .header-row {
@@ -56,7 +75,7 @@ html, body{
 .nav-link {
     color: #000;
     text-decoration: none;
-    font-size: 20px;   /* <--- MODIFICATO A 20px */
+    font-size: 14px;
     font-weight: normal;
     margin: 0 15px;
     padding: 8px 0;
@@ -103,7 +122,7 @@ html, body{
 
 .mobile-nav-wrapper .nav-link{
     font-size: 20px;
-   
+    padding: 10px 0;
 }
 
 .mobile-nav-wrapper .nav-link:hover{
@@ -120,6 +139,17 @@ html, body{
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 1px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-menu:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn-menu:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 /* Bottone close menu */
@@ -135,66 +165,122 @@ html, body{
     position: absolute;
     top: 30px;
     right: 30px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-close:hover {
+    transform: rotate(90deg);
+    background-color: #333;
+}
+
+/* ==================== INK & SHAPE SECTION ==================== */
+.inkshape-section {
+    background-color: #000;
+    height: 332px; /* <-- altezza fissa */
+    display: flex;
+    align-items: center; /* centra verticalmente il testo */
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.inkshape-title {
+      font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 1.1;
+    color: #fff;
+    margin: 0;
+    letter-spacing: -2px;
+   
 }
 
 /* ==================== HERO SECTION ==================== */
 
 .hero-section {
     background-color: #000;
-    min-height: 60vh;
+    height: 107px; /* <-- altezza fissa */
     display: flex;
-    align-items: center;
-    justify-content: flex-start; /* <-- allinea a sinistra */
-    text-align: left; /* <-- testo allineato a sinistra */
-    padding: 80px 20px;
+    align-items: center; /* centra verticalmente il testo */
+    justify-content: flex-start;
+    text-align: left;
+
 }
 
 .hero-title {
     font-family: Helvetica, Arial, sans-serif;
     font-weight: bold;
-    font-size: 80px;
+    font-size: 32px;
     line-height: 1.1;
     color: #fff;
     margin: 0;
     letter-spacing: -2px;
-    margin-left: 5%; /* <-- lascia un po’ di bordo a sinistra */
+   
 }
 
 /* ==================== SEZIONE CHI SONO ==================== */
 
 .section-chi-sono {
-    padding: 1rem 0;
-    background-color: #fff;
+    height: 523px;
+    padding: 0;
 }
 
-.section-title {
-    font-family: Helvetica, Arial, sans-serif;
-    font-weight: bold;
-    font-size: 28px;
-    line-height: 1.3;
-    margin-bottom: 25px;
-    color: #000;
+/* la row occupa tutta l'altezza */
+.section-chi-sono .row {
+    height: 100%;
+    align-items: center;
 }
 
-.section-text {
-    font-size: 16px;
-    line-height: 1.8;
-    margin-bottom: 20px;
-    color: #000;
+/* colonna immagine: stesso padding sopra/sotto che a sinistra */
+.section-chi-sono .col-lg-6 {
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
+
+/* immagine adattata allo spazio rimasto */
+.chi-sono-img {
+    width: 100%;
+    max-width: 699px;
+    height: calc(523px - 30px); /* 15px sopra + 15px sotto */
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    cursor: pointer;
+}
+
+.chi-sono-img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+
+
 
 /* ==================== SEZIONE FORMAZIONE ==================== */
 
 .section-formazione {
-    padding: 60px 0;
+    height: 474px;           /* altezza fissa del box */
     background-color: #fff;
+    padding: 0;              /* togli padding verticale predefinito */
+    display: flex;           /* usiamo flex per centrare verticalmente */
+    align-items: center;     /* centra verticalmente la row */
+}
+
+.section-formazione .row {
+    width: 100%;
+}
+
+.section-formazione .col-11 {
+    padding-left: 15px;      /* margine sinistro originale */
+    padding-top: 15px;       /* stesso margine sopra */
+    padding-bottom: 15px;    /* stesso margine sotto */
 }
 
 /* ==================== SEZIONE PROGETTI ==================== */
 
 .section-progetti {
-    padding: 80px 0 40px 0;
+    padding: 15px 0 40px 0;
     background-color: #fff;
+    height: 820px;
 }
 
 .section-title-progetti {
@@ -206,18 +292,34 @@ html, body{
     color: #000;
 }
 
+/* Griglia progetti - ALTEZZA UNIFORME */
 .progetti-grid {
-    /* Grid gestita da Bootstrap */
+    /* Rimosso padding - gestiamo tutto con Bootstrap */
+}
+
+.custom-img {
+    width: 100%;
+    max-width: 440px;
+    height: 548px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 20px auto;
+    transition: transform 0.4s ease, filter 0.4s ease;
+    cursor: pointer;
+}
+
+.custom-img:hover {
+    transform: translateY(-8px);
+    filter: brightness(1.1);
 }
 
 .progetto-item {
     margin-bottom: 30px;
+    transition: transform 0.3s ease;
 }
 
-.progetto-item img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 15px;
+.progetto-item:hover {
+    transform: translateY(-5px);
 }
 
 .progetto-nome {
@@ -237,15 +339,16 @@ html, body{
 /* ==================== FASCIA ESAME ==================== */
 
 .section-esame {
-    padding: 40px 0;
+    padding: 0; /* Rimuovo il padding per non aumentare l'altezza */
+    height: 136px; /* <-- altezza fissa */
     background-color: #fff;
     border-top: 1px solid #e0e0e0;
     border-bottom: 1px solid #e0e0e0;
 }
 
 .testo-esame {
-    font-size: 14px;
-    line-height: 1.6;
+    font-size: 20px;
+    line-height: 136px; /* Allinea verticalmente al centro per altezza fissa */
     margin: 0;
     color: #000;
 }
@@ -253,28 +356,62 @@ html, body{
 /* ==================== SEZIONE PARASCHIENA ==================== */
 
 .section-paraschiena {
-    padding: 80px 0;
     background-color: #000;
+    height: 740px;
+    padding: 0; /* niente padding sul contenitore */
 }
 
-.section-title-black {
-    font-family: Helvetica, Arial, sans-serif;
-    font-weight: bold;
-    font-size: 28px;
-    line-height: 1.3;
-    margin-bottom: 25px;
-    color: #fff;
+/* rimuove padding di container e colonna per far toccare il bordo */
+.section-paraschiena .content-wrapper,
+.section-paraschiena .col-12.col-lg-6 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 
-.section-paraschiena .section-text {
+/* IMMAGINE: alta precisa, non sborda, appiccicata a sinistra */
+.paraschiena-img {
+    height: 740px;       /* stessa altezza dello sfondo */
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;   /* riempie in orizzontale senza deformarsi */
+    display: block;
+    margin: 0;
+    transition: transform 0.6s ease;
+    cursor: pointer;
+}
+
+.paraschiena-img:hover {
+    transform: scale(1.05);
+}
+.section-textparaschiena {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
     color: #fff;
+    
+
 }
 
 /* ==================== SEZIONE ALTRI PROGETTI ==================== */
 
 .section-altri-progetti {
-    padding: 80px 0;
+    padding: 80px 0 40px 0;
     background-color: #fff;
+    height: auto;
+    min-height: 944px;
+}
+
+.section-altri-progetti .img-fluid {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    cursor: pointer;
+}
+
+.section-altri-progetti .img-fluid:hover {
+    transform: scale(1.03);
+    opacity: 0.9;
 }
 
 .progetto-titolo {
@@ -285,6 +422,13 @@ html, body{
     color: #000;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    transition: letter-spacing 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.progetto-titolo:hover {
+    letter-spacing: 1.5px;
+    color: #333;
 }
 
 .progetto-testo {
@@ -319,10 +463,14 @@ html, body{
     font-size: 14px;
     margin: 0 10px;
     border-bottom: 1px solid #000;
+    transition: transform 0.3s ease, letter-spacing 0.3s ease;
+    display: inline-block;
 }
 
 .social-link:hover {
     opacity: 0.7;
+    transform: scale(1.15);
+    letter-spacing: 2px;
 }
 
 .footer-copyright {
@@ -355,75 +503,332 @@ html, body{
     opacity: 0.7;
 }
 
-/* ==================== MEDIA QUERIES ==================== */
-
-/* Tablet e smartphone grande */
-@media (max-width: 991px) {
-    .hero-title {
-        font-size: 60px;
-    }
-    
-    .section-title {
-        font-size: 24px;
-    }
-    
-    .section-title-black {
-        font-size: 24px;
-    }
+.icona {
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: 0 auto 15px;
+    text-align: center;
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-/* Smartphone */
-@media (max-width: 767px) {
+.icona:hover {
+    transform: translateY(-8px) rotate(5deg);
+    filter: brightness(0.8);
+}
+
+.contatto-link {
+    text-decoration: none;
+    display: block;
+}
+
+.Contatto-text {
+   font-family: Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #000;
+    margin: 0;
+}
+
+.contatto-link {
+    text-decoration: none;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.contatto-link:hover .Contatto-text {
+    color: #000;
+}
+
+/* ==================== MEDIA QUERIES - MOBILE EXCELLENCE ==================== */
+
+/* Tablet (992px - 768px) */
+@media (max-width: 991px) and (min-width: 768px) {
+    .inkshape-section {
+        height: auto;
+        padding: 50px 0;
+    }
+    
+    .inkshape-title {
+        font-size: 50px;
+    }
+    
     .hero-section {
-        min-height: 50vh;
-        padding: 60px 20px;
+        height: auto;
+        padding: 30px 0;
     }
     
     .hero-title {
-        font-size: 48px;
+        font-size: 28px;
     }
     
     .section-chi-sono {
-        padding: 60px 0;
+        height: auto;
+        padding: 50px 0;
+    }
+    
+    .chi-sono-img {
+        width: 100%;
+        height: auto;
+        max-height: 400px;
+        margin-bottom: 30px;
     }
     
     .section-formazione {
-        padding: 40px 0;
+        height: auto;
+        padding: 50px 0;
     }
     
     .section-progetti {
-        padding: 60px 0 30px 0;
+        height: auto;
+        padding: 50px 0;
     }
     
-    .section-title-progetti {
-        font-size: 28px;
-        margin-bottom: 40px;
+    .custom-img {
+        max-width: 100%;
+        height: 400px;
+        margin-bottom: 15px;
+    }
+    
+    .progetto-item {
+        margin-bottom: 50px;
+    }
+    
+    .section-esame {
+        height: auto;
+        padding: 30px 0;
+    }
+    
+    .testo-esame {
+        font-size: 18px;
+        line-height: 1.6;
     }
     
     .section-paraschiena {
-        padding: 60px 0;
+        height: auto;
+        padding: 50px 0;
+    }
+    
+    .paraschiena-img {
+        width: 100%;
+        height: auto;
+        max-height: 500px;
+        margin-bottom: 30px;
     }
     
     .section-altri-progetti {
-        padding: 60px 0;
+        height: auto;
+        padding: 50px 0;
     }
 }
 
-/* Smartphone piccolo */
-@media (max-width: 576px) {
-    .hero-title {
+/* Smartphone (767px e inferiore) */
+@media (max-width: 767px) {
+    /* Header mobile ottimizzato */
+    .logo-cs {
+        font-size: 20px;
+    }
+    
+    /* Ink & Shape section mobile */
+    .inkshape-section {
+        height: auto;
+        padding: 40px 0;
+    }
+    
+    .inkshape-title {
         font-size: 40px;
+        letter-spacing: -1px;
+    }
+    
+    /* Hero section mobile */
+    .hero-section {
+        height: auto;
+        padding: 25px 0;
+    }
+    
+    .hero-title {
+        font-size: 24px;
+        letter-spacing: -1px;
+    }
+    
+    /* Chi sono mobile - immagine sopra, testo sotto */
+    .section-chi-sono {
+        height: auto;
+        padding: 40px 0;
+    }
+    
+    .section-chi-sono .row {
+        height: auto;
+    }
+    
+    .chi-sono-img {
+        width: 100%;
+        height: auto;
+        max-height: none;
+        margin-bottom: 30px;
+    }
+    
+    .section-title {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+    
+    .section-text {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+    
+    /* Formazione mobile */
+    .section-formazione {
+        height: auto;
+        padding: 40px 0;
+    }
+    
+    /* Progetti mobile - OGNI IMMAGINE CON IL SUO TESTO */
+    .section-progetti {
+        height: auto;
+        padding: 40px 0;
+    }
+    
+    .section-title-progetti {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    
+    .custom-img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 3/4;
+        margin-bottom: 15px;
+    }
+    
+    .progetto-item {
+        margin-bottom: 50px;
+        padding: 0 5px;
+    }
+    
+    .progetto-nome {
+        font-size: 18px;
+        margin-bottom: 10px;
+        margin-top: 5px;
+    }
+    
+    .progetto-descrizione {
+        font-size: 15px;
+        line-height: 1.7;
+        margin-bottom: 0;
+    }
+    
+    /* Fascia esame mobile */
+    .section-esame {
+        height: auto;
+        padding: 25px 0;
+    }
+    
+    .testo-esame {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+    
+    /* Paraschiena mobile */
+    .section-paraschiena {
+        height: auto;
+        padding: 40px 0;
+    }
+    
+    .paraschiena-img {
+        width: 100%;
+        height: auto;
+        max-height: none;
+        margin-bottom: 30px;
+    }
+    
+    .section-textparaschiena {
+        font-size: 16px;
+        line-height: 1.7;
+        padding: 0 15px;
+    }
+    
+    /* Altri progetti mobile */
+    .section-altri-progetti {
+        height: auto;
+        padding: 40px 0;
+    }
+    
+    /* Ogni immagine con il suo testo sotto */
+    .section-altri-progetti .col-12.col-lg-4 {
+        margin-bottom: 50px;
+    }
+    
+    .section-altri-progetti .img-fluid {
+        margin-bottom: 20px;
+        width: 100%;
+        height: auto;
+    }
+    
+    .progetto-titolo {
+        font-size: 16px;
+        margin-bottom: 10px;
+        margin-top: 0;
+    }
+    
+    .progetto-testo {
+        font-size: 15px;
+        line-height: 1.7;
+        margin-bottom: 0;
+    }
+    
+    /* Footer mobile */
+    .footer-section {
+        padding: 40px 0;
+    }
+    
+    .footer-text {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+}
+
+/* Smartphone piccolo (576px e inferiore) */
+@media (max-width: 576px) {
+    .inkshape-title {
+        font-size: 36px;
+    }
+    
+    .hero-title {
+        font-size: 22px;
     }
     
     .section-title {
         font-size: 22px;
     }
     
-    .section-title-black {
+    .section-title-progetti {
         font-size: 22px;
     }
     
-    .section-title-progetti {
-        font-size: 24px;
+    .progetto-nome {
+        font-size: 16px;
+    }
+    
+    .progetto-descrizione {
+        font-size: 14px;
+    }
+    
+    .testo-esame {
+        font-size: 15px;
+    }
+    
+    .section-textparaschiena {
+        font-size: 15px;
+    }
+    
+    .progetto-titolo {
+        font-size: 15px;
+    }
+    
+    .progetto-testo {
+        font-size: 14px;
     }
 }

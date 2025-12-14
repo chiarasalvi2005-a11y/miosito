@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="it" id="top">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,10 +10,11 @@
 <body>
   <!-- HEADER / NAVIGATION -->
   <div class="container-fluid">
-        <div class="row pt-3 pb-3 align-items-center header-row">
-            <div class="col-6 col-lg-1 offset-lg-0">
-    <a href="#" class="logo-cs">CS</a>
-</div>
+        <div class="row pt-4 pb-3 mb-3 align-items-center header-row">
+            <!-- Logo CS -->
+            <div class="col-6 col-lg-2">
+              <a href="#top" class="logo-cs">CS</a>
+            </div>
             
             <!-- Menu Desktop -->
             <div class="col-lg-9 nav-wrapper d-none d-lg-block">
@@ -60,11 +61,11 @@
     </div>
 
     <!-- HERO SECTION - INK & SHAPE -->
-    <section class="hero-section">
-        <div class="container-fluid content-wrapper">
-            <div class="row justify-content-end">
-                <div class="col-6">
-                    <h1 class="hero-title">Ink &<br>Shape</h1>
+    <section class="inkshape-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-5 offset-7">
+                    <h1 class="inkshape-title">Ink &<br>Shape</h1>
                 </div>
             </div>
         </div>
@@ -75,14 +76,12 @@
         <div class="container-fluid content-wrapper">
             <div class="row align-items-center">
                 <div class="col-12 col-lg-6 mb-4 mb-lg-0">
-                    <img class="img-fluid" src="img/IMG_7217.jpg" alt="Chi sono" style="width: 100vw;">
+                    <img class="chi-sono-img" src="img/IMG_7216.JPG" alt="Chi sono">
                 </div>
                 <div class="col-12 col-lg-4 offset-lg-1">
                     <h2 class="section-title">Chi sono?</h2>
                     <p class="section-text">
-                        Sono Chiara e con ogni progetto cerco di trovare il mio posto.
-                    </p>
-                    <p class="section-text">
+                        Sono Chiara e con ogni progetto cerco di trovare il mio posto. <br>
                         La creatività è sempre stata il filo conduttore della mia vita. Una passione che si è trasformata nel desiderio di realizzare idee che possano avere un senso anche per gli altri.
                     </p>
                 </div>
@@ -92,86 +91,91 @@
 
     <!-- SEZIONE FORMAZIONE -->
     <section id="formazione" class="section-formazione">
-        <div class="container-fluid content-wrapper">
-             <div class="row justify-content-end">
-                <div class="col-12 col-lg-4">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-11 col-lg-4 offset-1">
                     <h2 class="section-title">Formazione</h2>
                     <p class="section-text">
-                        Il mio percorso di studi è iniziato al Liceo delle Scienze Umane, esperienza che mi ha dato solide basi umanistiche e sociali. Successivamente ho deciso di cambiare rotta, intraprendendo un nuovo cammino all’Università di Design di San Marino, dove sto approfondendo la mia passione per la creatività e la progettazione.
+                        Il mio percorso di studi è iniziato al Liceo delle Scienze Umane, esperienza che mi ha dato solide basi umanistiche e sociali. Successivamente ho deciso di cambiare rotta, intraprendendo un nuovo cammino all'Università di Design di San Marino, dove sto approfondendo la mia passione per la creatività e la progettazione.
                     </p>
                 </div>
-                <div class="col-lg-1"></div>
             </div>
         </div>
     </section>
 
     <!-- SEZIONE I MIEI PROGETTI -->
-    <section id="progetti" class="section-progetti">
-        <div class="container-fluid content-wrapper">
-            <div class="row mb-5">
-                <div class="col-12">
-                    <h2 class="section-title-progetti">I MIEI PROGETTI</h2>
-                </div>
-            </div>
-           
-            <!-- FASCIA BIANCA - PROGETTO D'ESAME -->
-    <section class="section-esame">
-        <div class="container-fluid content-wrapper">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <p class="testo-esame">Progetto d'esame del corso di Laboratorio della Comunicazione</p>
+   <section id="progetti" class="hero-section">
+        <div class="container-fluid">
+            <div class="row hv-20">
+                <div class="col-11 offset-1">
+                    <h1 class="hero-title">I MIEI PROGETTI</h1>
                 </div>
             </div>
         </div>
     </section>
 
+     <!-- FASCIA BIANCA - PROGETTO D'ESAME -->
+   <section class="section-esame">
+    <div class="container-fluid">
+        <div class="row hv-20">
+            <div class="col-11 offset-1">
+                <p class="testo-esame">Progetto d'esame del corso di Laboratorio della Comunicazione</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- GRIGLIA PROGETTI -->
+    <section class="section-progetti">
+        <div class="container-fluid">
             <!-- Prima riga progetti (4 colonne) -->
-            <div class="row progetti-grid mb-4">
+            <div class="row progetti-grid">
                 <div class="col-12 col-sm-6 col-lg-3 mb-4">
                     <div class="progetto-item">
-                        <img class="img-fluid" src="img/manifesto1.jpg" alt="Manifesto Nuovastoria">
+                        <img class="custom-img" src="img/manifesto1.jpg" alt="Manifesto Nuovastoria">
                         <h3 class="progetto-nome">Manifesto</h3>
                         <p class="progetto-descrizione">Lavoro realizzato per il corso di Laboratorio della comunicazione ad UNIRSM Design. 
-L’obiettivo era la trasformazione dell’ “Ex cinema Astoria” da cinema di quartiere ad hub di comunità.
-Il tema centrale è “l’aggregazione” e mira a rappresentare visivamente i valori di connessione, inclusività e collaborazione, a partire dallo stesso logo.</p>
+L'obiettivo era la trasformazione dell' "Ex cinema Astoria" da cinema di quartiere ad hub di comunità.
+Il tema centrale è "l'aggregazione" e mira a rappresentare visivamente i valori di connessione, inclusività e collaborazione, a partire dallo stesso logo.</p>
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-3 mb-4">
                     <div class="progetto-item">
-                        <img class="img-fluid" src="img/totebag2.jpg" alt="Tote Bag">
+                        <img class="custom-img" src="img/totebag2.jpg" alt="Tote Bag">
                         <h3 class="progetto-nome">Tote Bag</h3>
-                        <p class="progetto-descrizione">In questa tote bag l’attenzione è focalizzata sul pay-off e sul font, parzialmente realizzato da noi studenti per esprimere al meglio i concetti di fluidità e connessione.</p>
+                        <p class="progetto-descrizione">In questa tote bag l'attenzione è focalizzata sul pay-off e sul font, parzialmente realizzato da noi studenti per esprimere al meglio i concetti di fluidità e connessione.</p>
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-3 mb-4">
                     <div class="progetto-item">
-                        <img class="img-fluid" src="img/badge.jpg" alt="Badge">
+                        <img class="custom-img" src="img/badge.jpg" alt="Badge">
                         <h3 class="progetto-nome">Badge</h3>
-                        <p class="progetto-descrizione">Badge realizzato con estrema cura per rappresentare visivamente i valori di connessione, inclusività e collaborazione.</p>
+                        <p class="progetto-descrizione">Badge realizzato con estrema cura per rappresentare visivamente i valori di connessione, inclusività e collaborazione..</p>
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-3 mb-4">
                     <div class="progetto-item">
-                        <img class="img-fluid" src="img/felpa.jpg" alt="Felpa">
+                        <img class="custom-img" src="img/felpa.jpg" alt="Felpa">
                         <h3 class="progetto-nome">Felpa</h3>
-                        <p class="progetto-descrizione">Felpa minimal che rappresenta l’essenza del progetto attraverso l’inserimento del logo e del naming.</p>
+                        <p class="progetto-descrizione">Felpa minimal che rappresenta l'essenza del progetto attraverso l'inserimento del logo e del naming.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SEZIONE PROTEGGI LA SCHIENA -->
+
+    <!-- SEZIONE PROTEZIONE TORACICA -->
     <section class="section-paraschiena">
         <div class="container-fluid content-wrapper">
             <div class="row align-items-center">
                 <div class="col-12 col-lg-6 mb-4 mb-lg-0">
-                    <img class="img-fluid" src="img/paraschiena.jpg" alt="Protezione toracica">
+                    <img class="paraschiena-img" src="img/paraschiena.jpg" alt="protezionetoracica">
                 </div>
-                <div class="col-12 col-lg-5 offset-lg-1">
-                    <h2 class="section-title-black">PROTEZIONE TORACICA</h2>
-                    <p class="section-text">
-                        Progetto e modellazione di un sistema di protezione toracica dedicato alla pratica della mountain bike, sviluppato nell’ambito dell’esame del corso di Rappresentazione Digitale Tridimensionale. Il lavoro è stato realizzato attraverso l’utilizzo del software Rhinoceros 3D, con l’obiettivo di creare un modello digitale che unisca sicurezza, comodità e un aspetto curato.
+                <div class="col-12 col-lg-4 offset-lg-1">
+                    <h2 class="section-textparaschiena">PROTEZIONE TORACICA</h2>
+                    <p class="section-textparaschiena">
+                        Progetto e modellazione di un sistema di protezione toracica dedicato alla pratica della mountain bike, sviluppato nell'ambito dell'esame del corso di Rappresentazione Digitale Tridimensionale. Il lavoro è stato realizzato attraverso l'utilizzo del software Rhinoceros 3D, con l'obiettivo di creare un modello digitale che unisca sicurezza, comodità e un aspetto curato.
                     </p>
                 </div>
             </div>
@@ -181,37 +185,31 @@ Il tema centrale è “l’aggregazione” e mira a rappresentare visivamente i 
     <!-- SEZIONE ALTRI PROGETTI -->
     <section class="section-altri-progetti">
         <div class="container-fluid content-wrapper">
-            <!-- Manifesto BETWEEN LOCKED -->
-            <div class="row mb-5 align-items-center">
-                <div class="col-12 col-lg-4 mb-4 mb-lg-0">
-                    <img class="img-fluid" src="img/MANIF.jpg" alt="Between Locked">
-                </div>
-                <div class="col-12 col-lg-4 mb-4 mb-lg-0">
-                    <img class="img-fluid" src="img/Rectangle 2.jpg" alt="Cappello in Pelle">
-                </div>
-                <div class="col-12 col-lg-4">
-                    <img class="img-fluid" src="img/IMG_7555.jpg" alt="Il Design Oggi">
-                </div>
-            </div>
-
-            <!-- Testi progetti -->
             <div class="row">
+                <!-- Progetto 1 -->
                 <div class="col-12 col-lg-4 mb-4 mb-lg-0">
-                    <h3 class="progetto-titolo">MANIFESTO CINEMA BETWEEN LOCKED</h3>
+                    <img class="img-fluid" src="img/MANIF.jpg" alt="Locked in Between ">
+                    <h3 class="progetto-titolo"><br>MANIFESTO CINEMA LOCKED IN BETWEEN</h3>
                     <p class="progetto-testo">
-                        Manifesto per il corso di Elementi di Tipografia, dove presenta il monologo di un personaggio e il titolo del film della lezione.
+                        Manifesto che rappresenta, nell'ambito del territorio, il concetto di confine, esplorandone il significato e le implicazioni attraverso lo spazio e i colori.
                     </p>
                 </div>
+                
+                <!-- Progetto 2 -->
                 <div class="col-12 col-lg-4 mb-4 mb-lg-0">
-                    <h3 class="progetto-titolo">COPRICAPO IN FELTRO</h3>
+                    <img class="img-fluid" src="img/Rectangle 2.jpg" alt="Cappello in feltro">
+                    <h3 class="progetto-titolo"><br>CAPPELLO IN FELTRO</h3>
                     <p class="progetto-testo">
-                        Copricapo in feltro realizzato artigianalmente durante un workshop con Reinhard Plank, sperimentando e valorizzando le diverse caratteristiche del materiale con cui l’artista lavora abitualmente.
+                        Cappello in feltro realizzato artigianalmente durante un workshop con Reinhard Plank, sperimentando e valorizzando le diverse caratteristiche del materiale con cui l'artista lavora abitualmente.
                     </p>
                 </div>
+                
+                <!-- Progetto 3 -->
                 <div class="col-12 col-lg-4">
-                    <h3 class="progetto-titolo">IL DESIGN OGGI - "100+1 DESIGNER OGGI"</h3>
+                    <img class="img-fluid" src="img/modificathilo.jpg" alt="Il Design Oggi">
+                    <h3 class="progetto-titolo">IL DESIGN OGGI E'... 100+1 DESIGNER OGGI</h3>
                     <p class="progetto-testo">
-                        Rivista di approfondimento sul designer Thilo Alex Brunner, realizzata in gruppo insieme ai miei compagni per il corso universitario Storia del Design.
+                         Rivista di approfondimento sul designer Thilo Alex Brunner, realizzata in gruppo insieme ai miei compagni per il corso universitario Storia del Design.
                     </p>
                 </div>
             </div>
@@ -219,26 +217,26 @@ Il tema centrale è “l’aggregazione” e mira a rappresentare visivamente i 
     </section>
 
     <!-- FOOTER / CONTATTI -->
-    <footer id="contatti" class="footer-section">
-        <div class="container-fluid content-wrapper">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <p class="footer-text">"Stile, armonia e innovazione: il design che racconta chi sei."</p>
-                    <div class="footer-social">
-                        <a href="#" class="social-link">Instagram</a>
-                    </div>
-                    <p class="footer-copyright">© 2024</p>
-                    <p class="footer-info">
-                        CS<br>
-                        Bologna — Ravenna
-                    </p>
-                    <p class="footer-links">
-                        <a href="#" class="footer-link">Privacy</a> — <a href="#" class="footer-link">Cookies</a>
-                    </p>
+<footer id="contatti" class="footer-section">
+    <div class="container-fluid content-wrapper">
+        <div class="row">
+            <div class="col-12 text-center">
+                <p class="footer-text">"Stile, armonia e innovazione: il design che racconta chi sei."</p>
+                <div class="footer-social">
+                    <a href="#top" class="social-link">CS</a>
                 </div>
+                <div class="icona text-center mb-4">
+                    <a href="https://www.instagram.com/cchiarasalvi" target="_blank" class="contatto-link">
+                        <img src="img/instagram.svg" alt="instagram" class="icona">
+                    </a>
+                </div>
+                <p class="footer-links">
+                    <a href="#" class="footer-link">Privacy</a> – <a href="#" class="footer-link">Cookies</a> – <span class="footer-text-inline">© 2024</span>
+                </p>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
 
     <!-- JavaScript per menu mobile -->
     <script>
